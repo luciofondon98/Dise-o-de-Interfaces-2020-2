@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import routes from './routes';
 import history from '../../helpers/history';
 
+// import Dropdown from 'react-dropdown';
+
 class navbar extends Component{ //transforma la clase en componente
  
     constructor(props){
@@ -21,7 +23,7 @@ class navbar extends Component{ //transforma la clase en componente
         //esto es para que muestre contenido HTML
         return(//codigo jsx
         <div>
-            <div className="navbar navbar-dark "style={{ alignItems:'center',display: 'block',  backgroundColor: '#3f4452'}}> {/*hola*/}
+            <div className="navbar navbar-dark "style={{ alignItems:'center',display: 'block',  backgroundColor: '#3f4452', float: "none", textAlign: "center"}}> {/*hola*/}
                 <div className='nav-options'>
                         {pages.map( (value, index) => {
                             return(
@@ -31,6 +33,8 @@ class navbar extends Component{ //transforma la clase en componente
                                 >
                                     {value.name}
                                 </button>
+                                // <Dropdown options={this.state.options_para_quimio} onChange={(event) => this.onSelect(event,pacientes.id)} value= "Cambia" placeholder="Select an option"/>
+                                // <Dropdown options="asd"/>
                             );
                         })}
                     </div>
