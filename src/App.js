@@ -6,7 +6,7 @@ import history from './helpers/history'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/navbar/navbar';
-import Tinder_Card from './components/tinder_card'
+import NewsCards from './components/NewsCards'
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <header>
         <NavBar></NavBar>
       </header>
-      <Tinder_Card></Tinder_Card>
+      <NewsCards></NewsCards>
     </div>  
   );
 }
