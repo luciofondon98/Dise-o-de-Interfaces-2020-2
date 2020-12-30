@@ -28,6 +28,7 @@ class navbar extends Component{ //transforma la clase en componente
         //esto es para que muestre contenido HTML
         return(//codigo jsx
         <div>
+
             <div className="row justify-content-md-center">
                 <div className="navbar navbar-dark "style={{ alignItems:'center',display: 'block', float: "none", textAlign: "center"}}>
                     <Dropdown options={options} placeholder="Nacional" className="rounded-sm"/> 
