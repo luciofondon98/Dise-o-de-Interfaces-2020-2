@@ -8,9 +8,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/navbar/navbar';
 import NewsCards from './components/NewsCards'
 
+import Mis_noticias from './components/mis_noticias'
+import Perfil from './components/perfil'
+import Configuracion from './components/configuracion'
+
 function App() {
   return (
     <div>
+      {/* <Configuracion></Configuracion> */}
+      {/* <Perfil></Perfil> */}
+      {/* <Mis_noticias></Mis_noticias> */}
       <header>
         <NavBar></NavBar>
       </header>
