@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import routes from './routes';
 import history from '../../helpers/history';
 
-// import Dropdown from 'react-dropdown';
+//react-dropdown
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 class navbar extends Component{ //transforma la clase en componente
  
@@ -20,23 +22,26 @@ class navbar extends Component{ //transforma la clase en componente
     
     render(){
         const pages = this.state.pages;
+        const options = [
+            'Nacional', 'Internacional'
+          ];
         //esto es para que muestre contenido HTML
         return(//codigo jsx
         <div>
-            <div className="navbar navbar-dark "style={{ alignItems:'center',display: 'block',  backgroundColor: '#3f4452', float: "none", textAlign: "center"}}> {/*hola*/}
-                <div className='nav-options'>
-                        {pages.map( (value, index) => {
+            <div className="navbar navbar-dark "style={{ alignItems:'center',display: 'block',  backgroundColor: '#3f4452', float: "none", textAlign: "center"}}>
+                <div className="row justify-content-md-center">
+                    <Dropdown options={options} placeholder="Nacional" className="rounded-sm"/> 
+                        {/* {pages.map( (value, index) => {
                             return(
-                                <button type="button" className="btn btn-secondary" style={{marginRight: '30px'}}
-                                    onClick={() => {history.push(value.path)}} 
-                                    key={index}
-                                >
-                                    {value.name}
-                                </button>
+                                // <button type="button" className="btn btn-secondary" style={{marginRight: '30px'}}
+                                //     onClick={() => {history.push(value.path)}} 
+                                //     key={index}
+                                // >
+                                //     {value.name}
+                                // </button>
                                 // <Dropdown options={this.state.options_para_quimio} onChange={(event) => this.onSelect(event,pacientes.id)} value= "Cambia" placeholder="Select an option"/>
-                                // <Dropdown options="asd"/>
                             );
-                        })}
+                        })} */}
                     </div>
                 </div>
         </div>
