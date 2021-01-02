@@ -1,0 +1,15 @@
+.swipeButtons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.swipeButtons .left {
+    padding: 1vw !important;
+    color: red !important;
+}
+
+.swipeButtons .right {
+    padding: 1vw !important;
+    color: green !important;
+}

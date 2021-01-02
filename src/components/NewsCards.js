@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { Check, X } from 'react-bootstrap-icons'
-import TinderCard from "react-tinder-card";
-import "./NewsCards.css";
 
+import IconButton from '@material-ui/core/IconButton'
+import ClearIcon from '@material-ui/icons/Clear';
+import CheckIcon from '@material-ui/icons/Check';
+import TinderCard from "react-tinder-card";
+
+import "./NewsCards.css";
+import "./swipeButtons.css"
 
 class NewsCards extends Component{
 
@@ -42,8 +46,14 @@ class NewsCards extends Component{
                         <br></br>
                         <br></br>
                         <div className="card-body">
-                            <Check style={{width: "40%", float: "right", height: '70px', color: 'green'}} ></Check>
-                            <X style={{width: "40%", float: "left", height: '70px', color: 'red'}} ></X>
+                            <div className="swipeButtons">
+                                <IconButton className="left">
+                                    <ClearIcon style={{width: "20%", height: '60px'}} ></ClearIcon>
+                                </IconButton>
+                                <IconButton className="right">
+                                    <CheckIcon style={{width: "20%", height: '60px'}} ></CheckIcon>
+                                </IconButton>
+                            </div>
                         </div>
                     </div>
                     </TinderCard>    
