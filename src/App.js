@@ -11,6 +11,7 @@ import NewsCards from './components/NewsCards'
 import Mis_noticias from './components/mis_noticias'
 import Perfil from './components/perfil'
 import Configuracion from './components/configuracion'
+import MenuLateral from './components/MenuLateral'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       {/* <Mis_noticias></Mis_noticias> */}
       <header>
         <NavBar></NavBar>
+        <MenuLateral></MenuLateral>
       </header>
       <NewsCards></NewsCards>
     </div>  
