@@ -44,7 +44,7 @@ class InternacionalCards extends Component{
         const {noticias} = this.state
 
         return(
-        <div className= "tinderCards_cardContainer">
+        <div style={{ marginBottom: 20, marginTop:20}} className= "tinderCards_cardContainer">
             {noticias.map((noticia)=>{
                 return ( 
                     <TinderCard className="swipe" key={noticia.title} preventSwipe={["up","down"]}> 
