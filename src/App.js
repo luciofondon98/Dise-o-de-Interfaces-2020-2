@@ -12,6 +12,7 @@ import Mis_noticias from './components/mis_noticias'
 import Perfil from './components/perfil'
 import Configuracion from './components/configuracion'
 import MenuLateral from './components/MenuLateral'
+import InternacionalCards from "./components/InternacionalCards";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
         <NavBar></NavBar>
         <MenuLateral></MenuLateral>
       </header>
-      <NewsCards></NewsCards>
+      <InternacionalCards></InternacionalCards>
+      {/*<NewsCards></NewsCards>*/}
     </div>  
   );
 }
