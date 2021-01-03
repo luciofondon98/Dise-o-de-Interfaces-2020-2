@@ -10,6 +10,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import SettingsIcon from '@material-ui/icons/Settings';
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import { Typography } from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles({
   list: {
@@ -69,14 +70,14 @@ export default function MenuLateral() {
 
   return (
     <div>
-      {[ 'right'].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-            {list(anchor)}
+        <React.Fragment>
+          <Button onClick={toggleDrawer('right', true)}>
+            <MenuIcon></MenuIcon>
+          </Button>
+          <Drawer anchor={'right'} open={state['right']} onClose={toggleDrawer('right', false)}>
+            {list('right')}
           </Drawer>
         </React.Fragment>
-      ))}
     </div>
   );
 }
