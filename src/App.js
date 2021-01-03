@@ -24,8 +24,8 @@ function App() {
         <NavBar></NavBar>
         <MenuLateral></MenuLateral>
       </header>
-      <InternacionalCards></InternacionalCards>
-      {/*<NewsCards></NewsCards>*/}
+      {/* <InternacionalCards></InternacionalCards> */}
+      <NewsCards></NewsCards>
     </div>  
   );
 }
