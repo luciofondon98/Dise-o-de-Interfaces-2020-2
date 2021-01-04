@@ -55,7 +55,7 @@ function Advanced () {
       <div className='tinderCards_cardContainer'>
         {characters.map((noticia, index) =>
             <TinderCard ref={childRefs[index]} className='swipe' key={noticia.title} onSwipe={(dir) => swiped(dir, noticia.title)} onCardLeftScreen={() => outOfFrame(noticia.title)} key={noticia.title} preventSwipe={["up","down"]}> 
-            <div className="card" style={{width: '30rem', textAlign: 'center',height: '35rem'}}>
+          <div className="card" style={{width: '30rem', textAlign: 'center',height: '35rem'}}>
                 <img className="card-img-top" src={noticia.photo} alt="Card image cap"></img>
                 <div className="card-body">
                     <h5 className="card-title">{noticia.title}</h5>
@@ -63,19 +63,20 @@ function Advanced () {
                 </div>
                 <br></br>
                 <br></br>
-                <div className="card-body">
-                    <div className="swipeButtons">
-                        <IconButton onClick={() => swipe('left')} className="left">
-                            <ClearIcon style={{width: "20%", height: '60px'}} ></ClearIcon>
-                        </IconButton>
-                        <IconButton onClick={() => swipe('right')} className="right">
-                            <CheckIcon style={{width: "20%", height: '60px'}} ></CheckIcon>
-                        </IconButton>
-                    </div>
-                </div>
             </div>
             </TinderCard>    
+            
         )}
+        <div className="card-body">
+            <div className="swipeButtons">
+                <IconButton onClick={() => swipe('left')} className="left">
+                    <ClearIcon style={{width: "20%", height: '60px'}} ></ClearIcon>
+                </IconButton>
+                <IconButton onClick={() => swipe('right')} className="right">
+                    <CheckIcon style={{width: "20%", height: '60px'}} ></CheckIcon>
+                </IconButton>
+            </div>
+        </div>
       </div>
     </div>
   )
