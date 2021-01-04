@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 class perfil extends Component{
     render(){
         return(
-            <div className='mt-4'>
+            <div>
                 <div className="row justify-content-md-center">
                     <Link to ="/">
                     <Button>
@@ -28,7 +28,7 @@ class perfil extends Component{
                     </div>
                     <div className='mt-2'>
                         <div className="row justify-content-md-center">
-                            <p className="lead" style={{fontSize: '20px'}}>     Cambiar foto</p>
+                            <p className="lead" style={{fontSize: '20px'}} >     Cambiar foto</p>
                         </div>
                         <div class="row justify-content-md-center">
                             <div className="col col-lg-2">
