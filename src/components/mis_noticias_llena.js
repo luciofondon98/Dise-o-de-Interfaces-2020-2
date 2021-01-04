@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 class mis_noticias_llena extends Component{
     render(){
         return(
-            <div className='mt-4'>
+            <div>
                 <div className="row justify-content-md-center">
                     <Link to ="/">
                     <Button>
