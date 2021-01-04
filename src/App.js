@@ -23,7 +23,6 @@ function App() {
     <div>
       < BrowserRouter history={history}>
         <div>
-          {/* <Prueba></Prueba> */}
           <MenuLateral></MenuLateral>
           <Switch>
             <Route exact path='/' render={() => <div><NavBar></NavBar><NewsCards></NewsCards></div>}/>
