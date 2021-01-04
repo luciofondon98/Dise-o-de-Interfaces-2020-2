@@ -35,7 +35,7 @@ class navbar extends Component{ //transforma la clase en componente
         <div>
             <div className='mt-3'>
                 <div className="row justify-content-md-center">
-                    <div className="navbar navbar-dark" style={{ alignItems:'center',display: 'block', float: "none", textAlign: "center", backgroundColor: "white", width: 45, height:45, position: 'absolute', top:20}}>
+                    <div className="navbar navbar-dark" style={{ alignItems:'center',display: 'block', float: "none", textAlign: "center", backgroundColor: "white", width: 45, height:45, marginRight: 80, position: 'absolute', top:20}}>
                         <DropdownButton id="dropdown-basic-button" title={this.state.dropDownValue} style={{ backgroundColor: "#fff"}}>
                             <Dropdown.Item as="button" >
                                 <Link to = "/" style={{color:"black"}}>
