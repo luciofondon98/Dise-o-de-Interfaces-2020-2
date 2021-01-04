@@ -12,7 +12,7 @@ import NewsCards from './components/NewsCards'
 
 import MenuLateral from './components/MenuLateral'
 import InternacionalCards from "./components/InternacionalCards";
-import mis_noticias from './components/mis_noticias';
+import mis_noticias_llena from './components/mis_noticias_llena';
 import perfil from './components/perfil';
 import configuracion from './components/configuracion';
 
@@ -27,7 +27,7 @@ function App() {
           <Switch>
             <Route exact path='/' render={() => <div><NavBar></NavBar><NewsCards></NewsCards></div>}/>
             <Route exact path="/Internacional" render={() => <div><NavBar></NavBar><InternacionalCards></InternacionalCards></div>}/>
-            <Route exact path="/Mis_Noticias" component={mis_noticias}/>
+            <Route exact path="/Mis_Noticias" component={mis_noticias_llena}/>
             <Route exact path="/Perfil" component={perfil}/>
             <Route exact path="/Configuracion" component={configuracion}/>
           </Switch>

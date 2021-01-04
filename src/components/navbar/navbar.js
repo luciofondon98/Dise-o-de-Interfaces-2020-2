@@ -38,13 +38,13 @@ class navbar extends Component{ //transforma la clase en componente
                     <div className="navbar navbar-dark" style={{ alignItems:'center',display: 'block', float: "none", textAlign: "center", backgroundColor: "white"}}>
                         <DropdownButton id="dropdown-basic-button" title={this.state.dropDownValue} style={{ backgroundColor: "#fff"}}>
                             <Dropdown.Item as="button" >
-                                <Link to = "/">
-                                <div onClick={(e) => this.changeValue(e.target.textContent)} style={{color:"black"}}>Nacional</div>
+                                <Link to = "/" style={{color:"black"}}>
+                                <div onClick={(e) => this.changeValue(e.target.textContent)} >Nacional</div>
                                 </Link>
                             </Dropdown.Item>
                             <Dropdown.Item as="button" >
-                             <Link to = "/Internacional">    
-                                <div onClick={(e) => this.changeValue(e.target.textContent)} style={{color:"black"}}>Internacional</div>
+                             <Link to = "/Internacional" style={{color:"black"}}>    
+                                <div onClick={(e) => this.changeValue(e.target.textContent)} >Internacional</div>
                                </Link>
                             </Dropdown.Item>
                         </DropdownButton>

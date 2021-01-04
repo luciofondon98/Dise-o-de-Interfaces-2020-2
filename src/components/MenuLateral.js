@@ -46,15 +46,15 @@ export default function MenuLateral() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <MenuList>
-        <Link to ="/Mis_Noticias">
+        <Link to ="/Mis_Noticias" style={{color: "black"}}>
           <MenuItem>
               <ListItemIcon>
                   <BookmarkBorderIcon/>
                   </ListItemIcon>  
-                  <Typography> Mis Noticias</Typography>
+                  <Typography > Mis Noticias</Typography>
           </MenuItem>
           </Link>
-          <Link to="/Perfil">
+          <Link to="/Perfil" style={{color: "black"}}>
         <MenuItem>
             <ListItemIcon>
                 <AccountCircleIcon/>
@@ -62,7 +62,7 @@ export default function MenuLateral() {
             <Typography> Mi Perfil</Typography>
         </MenuItem>
         </Link>
-        <Link to ="/Configuracion">
+        <Link to ="/Configuracion" style={{color: "black"}}>
         <MenuItem>
             <ListItemIcon>
                 <SettingsIcon/>
