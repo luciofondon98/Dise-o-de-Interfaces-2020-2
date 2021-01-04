@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 
+import HomeIcon from '@material-ui/icons/Home';
+import Button from '@material-ui/core/Button';
+
 import imagen from '../images/Saitama.jpg'
 
 class perfil extends Component{
     render(){
         return(
-            <div className='mt-5'>
+            <div className='mt-4'>
                 <div className="row justify-content-md-center">
+                    <Button>
+                        <HomeIcon></HomeIcon>
+                    </Button>
                         <h2>Mi Perfil</h2>
                 </div>
                 <div className='mt-4'>

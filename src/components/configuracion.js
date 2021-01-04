@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 
+import HomeIcon from '@material-ui/icons/Home';
+import Button from '@material-ui/core/Button';
+
 class configuracion extends Component{
     render(){
         return(
-            <div className='mt-5'>
+            <div className='mt-4'>
                 <div className="row justify-content-md-center">
+                    <Button>
+                        <HomeIcon></HomeIcon>
+                    </Button>
                         <h2>Configuración</h2>
                 </div>
                 <div className='mt-5'>
