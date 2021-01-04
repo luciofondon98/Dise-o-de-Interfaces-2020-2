@@ -8,24 +8,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/navbar/navbar';
 import NewsCards from './components/NewsCards'
 
-import Mis_noticias from './components/mis_noticias'
-import Perfil from './components/perfil'
-import Configuracion from './components/configuracion'
+
+
 import MenuLateral from './components/MenuLateral'
 import InternacionalCards from "./components/InternacionalCards";
+import mis_noticias from './components/mis_noticias';
+import perfil from './components/perfil';
+import configuracion from './components/configuracion';
+
+
 
 function App() {
   return (
     <div>
-      {/* <Configuracion></Configuracion> */}
-      {/* <Perfil></Perfil> */}
-      {/* <Mis_noticias></Mis_noticias> */}
-      <header>
-        <NavBar></NavBar>
-        <MenuLateral></MenuLateral>
-      </header>
-      {/* <InternacionalCards></InternacionalCards> */}
-      <NewsCards></NewsCards>
+      <Router history={history}>
+        <div>
+          <MenuLateral></MenuLateral>
+          <Switch>
+            <Route exact path='/' render={() => <div><NavBar></NavBar><NewsCards></NewsCards> </div>}/> 
+            <Route exact path="/Nacional" components={NavBar, NewsCards}/>
+            <Route exact path="/Internacional" components={NavBar, InternacionalCards}/>
+            <Route exact path="/Mis_Noticias" component={mis_noticias}/>
+            <Route exact path="/Perfil" component={perfil}/>
+            <Route exact path="/Configuracion" component={configuracion}/>
+          </Switch>
+        </div>
+      </Router>
     </div>  
   );
 }
