@@ -71,7 +71,7 @@ export default function MenuLateral() {
   return (
     <div>
         <React.Fragment>
-          <Button onClick={toggleDrawer('right', true)} style={{ width: 45, height:45, marginLeft: 925, position: 'absolute', top: 23}}>
+          <Button onClick={toggleDrawer('right', true)} style={{ width: 45, height:45, marginLeft: 925, position: 'relative', top: 23, marginBottom:35}}>
             <MenuIcon style={{ width: 45, height:45}}></MenuIcon>
           </Button>
           <Drawer anchor={'right'} open={state['right']} onClose={toggleDrawer('right', false)}>

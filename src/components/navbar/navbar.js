@@ -32,19 +32,19 @@ class navbar extends Component{ //transforma la clase en componente
         
         //esto es para que muestre contenido HTML
         return(//codigo jsx
-        <div style={{position: 'relative'}}>
+        <div style={{width: 45, height:45, marginLeft: 730, position: 'absolute', top:6}}>
             <div className='mt-3'>
                 <div className="row justify-content-md-center">
                     <div className="navbar navbar-dark" style={{ alignItems:'center',display: 'block', float: "none", textAlign: "center", backgroundColor: "white"}}>
                         <DropdownButton id="dropdown-basic-button" title={this.state.dropDownValue} style={{ backgroundColor: "#fff"}}>
                             <Dropdown.Item as="button" >
                                 <Link to = "/">
-                                <div onClick={(e) => this.changeValue(e.target.textContent)}>Nacional</div>
+                                <div onClick={(e) => this.changeValue(e.target.textContent)} style={{color:"black"}}>Nacional</div>
                                 </Link>
                             </Dropdown.Item>
                             <Dropdown.Item as="button" >
                              <Link to = "/Internacional">    
-                                <div onClick={(e) => this.changeValue(e.target.textContent)}>Internacional</div>
+                                <div onClick={(e) => this.changeValue(e.target.textContent)} style={{color:"black"}}>Internacional</div>
                                </Link>
                             </Dropdown.Item>
                         </DropdownButton>
