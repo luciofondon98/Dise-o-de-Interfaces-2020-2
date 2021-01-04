@@ -5,14 +5,18 @@ import Button from '@material-ui/core/Button';
 
 import imagen from '../images/Saitama.jpg'
 
+import { Link } from "react-router-dom";
+
 class perfil extends Component{
     render(){
         return(
             <div className='mt-4'>
                 <div className="row justify-content-md-center">
+                    <Link to ="/">
                     <Button>
                         <HomeIcon></HomeIcon>
                     </Button>
+                    </Link>
                         <h2>Mi Perfil</h2>
                 </div>
                 <div className='mt-4'>

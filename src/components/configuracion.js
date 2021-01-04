@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 
 import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 class configuracion extends Component{
     render(){
         return(
             <div className='mt-4'>
                 <div className="row justify-content-md-center">
+                    <Link to ="/">
                     <Button>
                         <HomeIcon></HomeIcon>
                     </Button>
+                    </Link>
                         <h2>Configuración</h2>
                 </div>
                 <div className='mt-5'>

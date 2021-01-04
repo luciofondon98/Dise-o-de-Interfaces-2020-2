@@ -11,6 +11,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import { Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   list: {
@@ -45,24 +46,30 @@ export default function MenuLateral() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <MenuList>
+        <Link to ="/Mis_Noticias">
           <MenuItem>
               <ListItemIcon>
                   <BookmarkBorderIcon/>
                   </ListItemIcon>  
                   <Typography> Mis Noticias</Typography>
           </MenuItem>
+          </Link>
+          <Link to="/Perfil">
         <MenuItem>
             <ListItemIcon>
                 <AccountCircleIcon/>
             </ListItemIcon>
             <Typography> Mi Perfil</Typography>
         </MenuItem>
+        </Link>
+        <Link to ="/Configuracion">
         <MenuItem>
             <ListItemIcon>
                 <SettingsIcon/>
             </ListItemIcon>
             <Typography> Configuración</Typography>
         </MenuItem>
+        </Link>
       </MenuList>
       
     </div>
