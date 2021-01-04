@@ -66,9 +66,13 @@ function Advanced () {
                     <h5 className="card-title">{noticia.title}</h5>
                     <p className="card-text">{noticia.body}</p>
                 </div>
+                <h4>Deslice para seleccionar</h4>
                 <br></br>
                 <br></br>
             </div>
+            
+              
+            
             </TinderCard>    
             
         )}

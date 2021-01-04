@@ -19,7 +19,7 @@ class navbar extends Component{ //transforma la clase en componente
         super();
 
         this.state = {
-            dropDownValue: "Categoria"
+            dropDownValue: "Nacional"
         }
     }
     
