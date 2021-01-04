@@ -9,7 +9,7 @@ import NavBar from './components/navbar/navbar';
 import NewsCards from './components/NewsCards'
 
 
-import Prueba from './components/prueba'
+
 import MenuLateral from './components/MenuLateral'
 import InternacionalCards from "./components/InternacionalCards";
 import mis_noticias_llena from './components/mis_noticias_llena';
