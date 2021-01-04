@@ -78,8 +78,8 @@ function Advanced () {
             
         )}
         <div className="card-body">
-            <div style={{marginTop: 430, marginRight: 400}} className="swipeButtons">
-                <IconButton onClick={() => swipe('left')} className="left" style={{ marginRight: -350}}>
+          <div style={{marginTop: 600}} className="swipeButtons">
+                <IconButton onClick={() => swipe('left')} className="left" style={{ marginRight: -550}}>
                     <ClearIcon style={{width: "20%", height: '60px'}} ></ClearIcon>
                 </IconButton>
                 <IconButton onClick={() => swipe('right')} className="right">
