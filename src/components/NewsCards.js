@@ -26,7 +26,7 @@ const db = [
 ]
 
 const alreadyRemoved = []
-let charactersState = db // This fixes issues with updating characters state forcing it to use the current state and not the state that was active when the card was created.
+let charactersState = db 
 
 function Advanced () {
   const [characters, setCharacters] = useState(db)
@@ -42,19 +42,19 @@ function Advanced () {
   const swipe = (dir) => {
     const cardsLeft = characters.filter(person => !alreadyRemoved.includes(person.title))
     if (cardsLeft.length) {
-      const toBeRemoved = cardsLeft[cardsLeft.length - 1].title // Find the card object to be removed
-      const index = db.map(person => person.title).indexOf(toBeRemoved) // Find the index of which to make the reference to
-      alreadyRemoved.push(toBeRemoved) // Make sure the next card gets removed next time if this card do not have time to exit the screen
-      childRefs[index].current.swipe(dir) // Swipe the card!
+      const toBeRemoved = cardsLeft[cardsLeft.length - 1].title // Encuentra el opbjeto carta para remover
+      const index = db.map(person => person.title).indexOf(toBeRemoved) // Encuentra el indice en la cual haecr la referencia
+      alreadyRemoved.push(toBeRemoved) 
+      childRefs[index].current.swipe(dir) // Deslizar carta
     }
   }
 
   return (
     <div>
       {characters.length == 0 &&
-      <SinNoticias></SinNoticias>
+      <SinNoticias></SinNoticias> {/*Se muestra un aviso de que no hay mas noticias una vez se interactuo con todas */} 
       }
-      <div style={{marginBottom: 20, marginTop: 20}} className='tinderCards_cardContainer'>
+      <div style={{marginBottom: 20, marginTop: 20}} className='tinderCards_cardContainer'>   {/*Estructura de la carta y comop saca la informacion de la db */}
         {characters.map((noticia, index) =>
             <TinderCard ref={childRefs[index]} className='swipe' key={noticia.title} onCardLeftScreen={() => outOfFrame(noticia.title)} key={noticia.title} preventSwipe={["up","down"]}> 
           <div className="card" style={{width: '30rem', textAlign: 'center',height: '35rem'}}>
@@ -71,7 +71,7 @@ function Advanced () {
         )}
         <div className="card-body">
             <div style={{marginTop: 600}} className="swipeButtons">
-                <IconButton onClick={() => swipe('left')} className="left" style={{ marginRight: -550}}>
+                <IconButton onClick={() => swipe('left')} className="left" style={{ marginRight: -550}}>  {/*Aqui se encuentran los botones de swipe */}
                     <ClearIcon style={{width: "20%", height: '60px'}} ></ClearIcon>
                 </IconButton>
                 <IconButton onClick={() => swipe('right')} className="right">
