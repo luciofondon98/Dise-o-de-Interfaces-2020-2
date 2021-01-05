@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 
 import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
-
 import imagen from '../images/Saitama.jpg'
-
 import { Link } from "react-router-dom";
 
 class perfil extends Component{

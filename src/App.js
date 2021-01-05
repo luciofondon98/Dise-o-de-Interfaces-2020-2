@@ -1,29 +1,20 @@
-// import logo from './logo.svg';
 import './App.css';
-
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import history from './helpers/history'
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/navbar/navbar';
 import NewsCards from './components/NewsCards'
-
-
-
 import MenuLateral from './components/MenuLateral'
 import InternacionalCards from "./components/InternacionalCards";
 import mis_noticias_llena from './components/mis_noticias_llena';
 import perfil from './components/perfil';
 import configuracion from './components/configuracion';
-import SinNoticias from './components/SinNoticias'
-
 
 function App() {
   return (
     <div>
       < BrowserRouter history={history}>
         <div>
-          {/* <SinNoticias></SinNoticias> */}
           <MenuLateral></MenuLateral>
           <Switch>
             <Route exact path='/' render={() => <div><NavBar></NavBar><NewsCards></NewsCards></div>}/>

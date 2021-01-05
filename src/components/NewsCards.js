@@ -30,15 +30,8 @@ let charactersState = db // This fixes issues with updating characters state for
 
 function Advanced () {
   const [characters, setCharacters] = useState(db)
-  const [lastDirection, setLastDirection] = useState()
 
   const childRefs = useMemo(() => Array(db.length).fill(0).map(i => React.createRef()), [])
-
-  const swiped = (direction, nameToDelete) => {
-    console.log('removing: ' + nameToDelete)
-    setLastDirection(direction)
-    alreadyRemoved.push(nameToDelete)
-  }
 
   const outOfFrame = (name) => {
     console.log(name + ' left the screen!')
@@ -63,7 +56,7 @@ function Advanced () {
       }
       <div style={{marginBottom: 20, marginTop: 20}} className='tinderCards_cardContainer'>
         {characters.map((noticia, index) =>
-            <TinderCard ref={childRefs[index]} className='swipe' key={noticia.title} onSwipe={(dir) => swiped(dir, noticia.title)} onCardLeftScreen={() => outOfFrame(noticia.title)} key={noticia.title} preventSwipe={["up","down"]}> 
+            <TinderCard ref={childRefs[index]} className='swipe' key={noticia.title} onCardLeftScreen={() => outOfFrame(noticia.title)} key={noticia.title} preventSwipe={["up","down"]}> 
           <div className="card" style={{width: '30rem', textAlign: 'center',height: '35rem'}}>
                 <img className="card-img-top" src={noticia.photo} alt="Card image cap"></img>
                 <div className="card-body">
