@@ -3,6 +3,7 @@ import TinderCard from 'react-tinder-card'
 import IconButton from '@material-ui/core/IconButton'
 import ClearIcon from '@material-ui/icons/Clear';
 import CheckIcon from '@material-ui/icons/Check';
+import SinNoticias from './SinNoticias'
 
 import "./NewsCards.css";
 import "./swipeButtons.css"
@@ -57,6 +58,9 @@ function Advanced () {
 
   return (
     <div>
+      {characters.length == 0 &&
+      <SinNoticias></SinNoticias>
+      }
       <div style={{marginBottom: 20, marginTop: 20}} className='tinderCards_cardContainer'>
         {characters.map((noticia, index) =>
             <TinderCard ref={childRefs[index]} className='swipe' key={noticia.title} onSwipe={(dir) => swiped(dir, noticia.title)} onCardLeftScreen={() => outOfFrame(noticia.title)} key={noticia.title} preventSwipe={["up","down"]}> 
