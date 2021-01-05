@@ -8,17 +8,9 @@ class mis_noticias extends Component{
     render(){
         return(
             <div className='mt-4'>
-                <div className="row justify-content-md-center">
-                    <Link to ="/">
-                    <Button>
-                        <HomeIcon></HomeIcon>
-                    </Button>
-                    </Link>
-                        <h2>Mis Noticias</h2>
-                </div>
                 <div className='mt-5'>
                     <div className="row justify-content-md-center" style={{fontSize: '23px'}}>
-                        <p><em>     No tienes noticias guardadas.</em></p>
+                        <p><em>No quedan más noticias</em></p>
                     </div>
                     <div className='mt-5'>
                         <div className="row justify-content-md-center">
