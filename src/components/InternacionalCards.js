@@ -59,7 +59,7 @@ function Advanced () {
       {characters.length == 0 &&
       <SinNoticias></SinNoticias>
       }
-      <div style={{marginBottom: 20, marginTop: 20}} className='tinderCards_cardContainer'>
+      <div style={{marginBottom: 20, marginTop: 20}} className='tinderCards_cardContainer'>  {/*Aqui se define la estructura de las cartas y se escribe como extrae la informacion del arreglo de arriba  */}
         {characters.map((noticia, index) =>
             <TinderCard ref={childRefs[index]} className='swipe' key={noticia.title} onCardLeftScreen={() => outOfFrame(noticia.title)} key={noticia.title} preventSwipe={["up","down"]}> 
           <div className="card" style={{width: '30rem', textAlign: 'center',height: '35rem'}}>
@@ -77,7 +77,7 @@ function Advanced () {
         )}
         <div className="card-body">
           <div style={{marginTop: 600}} className="swipeButtons">
-                <IconButton onClick={() => swipe('left')} className="left" style={{ marginRight: -550}}>
+                <IconButton onClick={() => swipe('left')} className="left" style={{ marginRight: -550}}>  {/* Acá se implementan los botones de las cartas para las funciones de swipe*/}
                     <ClearIcon style={{width: "20%", height: '60px'}} ></ClearIcon>
                 </IconButton>
                 <IconButton onClick={() => swipe('right')} className="right">
