@@ -52,7 +52,7 @@ function Advanced () {
   return (
     <div>
       {characters.length == 0 &&
-      <SinNoticias></SinNoticias> {/*Se muestra un aviso de que no hay mas noticias una vez se interactuo con todas */} 
+      <SinNoticias></SinNoticias>
       }
       <div style={{marginBottom: 20, marginTop: 20}} className='tinderCards_cardContainer'>   {/*Estructura de la carta y comop saca la informacion de la db */}
         {characters.map((noticia, index) =>
